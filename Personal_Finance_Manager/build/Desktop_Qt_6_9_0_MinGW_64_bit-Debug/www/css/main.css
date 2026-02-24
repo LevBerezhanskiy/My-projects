@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #2d3748;
+}
+
+h1 {
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #10b981);
+    border-radius: 3px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Стили для фильтрации (без grid) */
+.group {
+    margin-bottom: 25px;
+    animation: slideUp 0.6s ease-out;
+}
+
+.group label {
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 5px;
+    margin-top: 11px;
+    display: block;
+    font-size: 15px;
+}
+
+.group input,
+.group select {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    background-color: #f8fafc;
+    margin-bottom: 15px;
+}
+
+.group input:focus,
+.group select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    outline: none;
+    background-color: white;
+}
+
+.group input:hover,
+.group select:hover {
+    border-color: #c7d2fe;
+}
+
+@media (min-width: 768px) {
+    .group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .group label {
+        width: 100%;
+    }
+    
+    .group input,
+    .group select {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+/* Стили для таблицы */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.table th {
+    background-color: #4f46e5;
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Стили для баланса */
+.balance {
+    margin-top: 30px;
+    font-size: 19.2px;
+    font-weight: 600;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #f0fff4, white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease-out 0.4s both;
+}
+
+.balance:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.15);
+}
+
+#total-balance {
+    color: #10b981;
+    font-size: 20.8px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+        font-size: 14.4px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    
+    /* Фильтры в мобильной версии */
+    .group input,
+    .group select {
+        width: 100%;
+    }
+}
+
+/* Мобильная версия для очень маленьких экранов */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .balance {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #total-balance {
+        font-size: 17.6px;
+    }
+}

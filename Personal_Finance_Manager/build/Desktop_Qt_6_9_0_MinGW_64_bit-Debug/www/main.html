@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logos/icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Менеджер личных финансов с отчётами</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Управление транзакциями</h1>
+
+        <!-- Фильтрация транзакций -->
+        <div class="group">
+            <label class="date" for="date">Фильтр по дате:</label>
+            <input type="date" id="date">
+            <label class="category" for="ategory">Фильтр по категории:</label>
+            <input type="text" id="category">
+            <label class="type" for="type">Фильтр по типу:</label>
+            <select id="type">
+                <option value="all">Все</option>
+                <option value="income">Доход</option>
+                <option value="expense">Расход</option>
+            </select>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Тип</th>
+                    <th>Категория</th>
+                    <th>Дата</th>
+                    <th>Сумма</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsTableBody">
+                <tr><td colspan="6">Загрузка...</td></tr>
+            </tbody>
+        </table>
+
+        <div class="balance">
+            Общий баланс: <span id="total-balance">0</span> руб.
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

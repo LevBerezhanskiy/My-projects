@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+1b1ea6e1e12f256b9a8fe29a8e8c935b CMakeFiles/QtKursovaya_autogen
+1b1ea6e1e12f256b9a8fe29a8e8c935b CMakeFiles/server_exe_target_autogen
+a6f5d7ba9eb4e59659af2539b7fa505c QtKursovaya_autogen/timestamp
+2698f9f7a48d7247cc5bdce14430362c server_exe_target_autogen/timestamp

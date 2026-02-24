@@ -1,0 +1,5 @@
+Id,Type,Category,Date,Amount,Description
+1,income,food,2025-04-22,1000.02,Lunch
+2,expense,Транспорт,2025-04-23,75.00,Метро
+3,expense,Еда,2006-11-02,500,Бургер
+4,income,Работа,2006-11-02,550000.00,Зарплата
